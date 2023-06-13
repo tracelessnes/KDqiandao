@@ -282,7 +282,7 @@ JingYi:
         - user:
             name: ''
             # lDlk_ecc9_saltkey, lDlk_ecc9_auth
-            cookie: ''
+            cookie: 'lDlk_ecc9_saltkey=yZgak3ez; lDlk_ecc9_auth=451ft2Toz74PY8rwdrQUQT1BmWz4kf5ucOgGLOKxTInKeAshhsaMWPbP3%2FWnuQ'
 
 # 酒入论坛
 JiuRu:
@@ -291,4 +291,31 @@ JiuRu:
         - user:
             name: ''
             # m1cT_2132_saltkey, m1cT_2132_auth
-            cookie: ''            
+            cookie: 'm1cT_2132_saltkey=q2aL52a5; m1cT_2132_auth=b168gY6MFv8pCQ%2F3yZtUsRAVkLugvQYkhVUmRDs5eev5NURtcdhSQyVvYB8zeb8lwUDKqilxII6cfqBxbwlSccbVOg'
+
+# 真牛论坛
+ZhenNiu:
+    send: 0
+    cookies:
+        - user:
+            name: ''
+            # qWHJ_77aa_saltkey, qWHJ_77aa_auth
+            cookie: 'qWHJ_77aa_saltkey=Xo17Neoc; qWHJ_77aa_auth=06ddFoNtgc9%2Ff%2F1G2l1vxr1BpraNK8%2B%2B3dlpAOcbHGUWJ%2BTD84WKkGK%2Fk2sI%2BN9uB78rGEGVY8xtBNPYDb5oyAwYOew'
+
+# 96论坛
+J6LunTan:
+    send: 0
+    cookies:
+        - user:
+            name: ''
+            # qGpy_2132_saltkey, qGpy_2132_auth
+            cookie: 'qGpy_2132_saltkey=kZPoVSNN; qGpy_2132_auth=093045plpEY8WS4xgaNBOdVvtH84sYbaoCa90o0%2FONTTIsoYEgg4grbxzCNaJhDTVkA7TWY3toGpTlU5JPd3HnPm'
+
+# 挂海论坛
+GuaHai:
+    send: 0
+    cookies:
+        - user:
+            name: ''
+            # qGpy_2132_saltkey, qGpy_2132_auth
+            cookie: 'FLBs_2132_saltkey=J8U5r5g5; FLBs_2132_auth=6dbfUXKMyDT45eMVkSJBa0bWbzjx%2BhrCafY3huHCEaSpjAvocBbtpXaJlCaHBHwZH5ziJ5IADgbhn2rKoGKYkMrYKg'

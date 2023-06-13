@@ -77,11 +77,11 @@ class JiuRu:
         print(f'剩余{jf}')
         jq = re.findall('金钱: <span id="hcredit_2">(.*)</span></li><li', res.text)[0]
         print(f'剩余{jq}')
-        self.sio.write(f', 剩余金钱{jq}\n 剩余积分{jf}\n')
+        self.sio.write(f', 剩余金钱{jq} 剩余积分{jf}\n')
 
     def SignIn(self):
-        print("酒入论坛 日志】")
-        self.sio.write("酒入论坛\n")
+        print("【酒入论坛 日志】")
+        self.sio.write("【酒入论坛】\n")
         for cookie in self.Cookies:
             cookie = cookie.get("user")
             self.cookie = cookie.get("cookie")
