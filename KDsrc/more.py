@@ -1,35 +1,35 @@
 """
 多签的配置文件
 """
-from ..AcFun import AcFun
-from ..AiHao import AiHao
-from ..BDTieBa import BDTieBa
-from ..BLBL import BLBL
-from ..CCAVA import CCAVA
-from ..Cloud import Cloud
-from ..CSDN import CSDN
-from ..Du163 import Du163
-from ..DuoKan import DuoKan
-from ..EnShan import EnShan
-from ..HLX import HLX
-from ..IQIYI import IQIYI
-from ..Lenovo import Lenovo
-from ..LenovoLTB import LenovoLTB
-from ..Music163 import Music163
-from ..NoteYouDao import NoteYouDao
-from ..PTA import PTA
-from ..SMZDM import SMZDM
-from ..ToolLu import ToolLu
-from ..VQQ import VQQ
-from ..W2PJ import W2PJ
-from ..Weather import Weather
-from ..WPS import WPS
-from ..XMYD import XMYD
-from ..YHZWW import YHZWW
-from ..JingYi import JingYi
-from ..JiuRu import JiuRu
-
-
+from AcFun import AcFun
+from AiHao import AiHao
+from BDTieBa import BDTieBa
+from BLBL import BLBL
+from CCAVA import CCAVA
+from Cloud import Cloud
+from CSDN import CSDN
+from Du163 import Du163
+from DuoKan import DuoKan
+from EnShan import EnShan
+from HLX import HLX
+from IQIYI import IQIYI
+from Lenovo import Lenovo
+from LenovoLTB import LenovoLTB
+from Music163 import Music163
+from NoteYouDao import NoteYouDao
+from PTA import PTA
+from SMZDM import SMZDM
+from ToolLu import ToolLu
+from VQQ import VQQ
+from W2PJ import W2PJ
+from Weather import Weather
+from WPS import WPS
+from XMYD import XMYD
+from YHZWW import YHZWW
+from JingYi import JingYi
+from JiuRu import JiuRu
+from ZhenNiu import ZhenNiu
+from J6LunTan import J6LunTan
 
 map = {
     "AcFun": ["AcFun", AcFun],
@@ -58,5 +58,7 @@ map = {
     "XMYD": ["小米运动", XMYD],
     "YHZWW": ["油猴中文网", YHZWW],
     "JingYi": ["精易论坛", JingYi],
-    "JiuRu": ["酒入论坛", JiuRu]
+    "JiuRu": ["酒入论坛", JiuRu],
+    "ZhenNiu": ["真牛论坛", ZhenNiu],
+    "J6LunTan": ["96论坛", J6LunTan]
 }
