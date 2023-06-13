@@ -6,7 +6,7 @@ new Env('签到集合')
 import traceback, argparse
 from io import StringIO
 from KDconfig import getYmlConfig, send
-from KDsrc.more import map
+from more import map
 
 all = StringIO()
 all.write('===== 每日签到 =====\n')

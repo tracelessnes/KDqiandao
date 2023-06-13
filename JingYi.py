@@ -4,7 +4,7 @@ cron: 21 6 * * *
 new Env('精易论坛');
 """
 
-import requests, sys, re, traceback
+import requests, sys, re, traceback,time
 from io import StringIO
 from bs4 import BeautifulSoup
 from KDconfig import getYmlConfig, send
@@ -19,10 +19,16 @@ class JingYi:
         session = requests.session()
         requests.utils.add_dict_to_cookiejar(session.cookies, {item.split("=")[0]: item.split("=")[1] for item in self.cookie.split("; ")})
         session.headers.update({"Referer": "https://bbs.125.la/plugin.php?id=dsu_paulsign:sign"})
-        session.headers.update({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"})
+        session.headers.update({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.62"})
         res = session.get(url="https://bbs.125.la/plugin.php?id=dsu_paulsign:sign")
+        while 'antiCC_' in res.text:
+            print("Resigning because of antiCC_...")
+            self.getcookie()
+            time.sleep(2)
         formhash=re.findall(r'formhash=(.*)">退出', res.text)
-        print("formhash",formhash[0])
+        if len(formhash) == 0:
+            formhash = ['9658ce31']  # 如果没有获取到formhash则默认设置为 '9658ce31'
+        print("formhash", formhash[0])        
         url_page ='https://bbs.125.la/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=1'
         data = {'formhash':formhash[0],"submit": "1","targerurl": "","todaysay": "","qdxq": "kx"}
         res = session.post(url=url_page, data=data)
@@ -43,7 +49,7 @@ class JingYi:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.62'
         }
         session = requests.session()
-        url_page = 'https://bbs.125.la/plugin.php?id=dsu_paulsign:sign'
+        url_page = 'https://bbs.125.la/plugin.php?id=dsu_paulsign:sign&inajax=1'
         rep = session.get(url=url_page, headers=headers)
         print(rep.text)
         pattern = r'(antiCC_[0-9]+)'
@@ -63,13 +69,8 @@ class JingYi:
     def getJB(self):
         session = requests.session()
         requests.utils.add_dict_to_cookiejar(session.cookies, {item.split("=")[0]: item.split("=")[1] for item in self.cookie.split("; ")})
-        session.headers.update({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"})
+        session.headers.update({"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.62"})
         url = 'https://bbs.125.la/home.php?mod=spacecp&ac=credit&showcredit=1&inajax=1&ajaxtarget=extcreditmenu_menu'
-        headers = {
-            "Referer": "https://bbs.125.la",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
-            "Cookie": self.cookie
-        }
         res = session.get(url=url)
         
         print(res.text)

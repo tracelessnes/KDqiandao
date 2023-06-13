@@ -14,10 +14,10 @@
 > 您使用或者复制了本仓库且本人制作的任何脚本，则视为 `已接受` 此声明，请仔细阅读
 
 ##  简单的操作
-https://github.com/tracelessnes/KDCheckin.git
+
 拉取本站
 ```shell
-ql repo https://github.com/tracelessnes/KDCheckin.git "AiHao|DuoKan|QianDao|Weather|News" "" "KD"
+ql repo https://github.com/KD-happy/KDCheckin.git "AiHao|DuoKan|QianDao|Weather|News" "" "KD"
 \cp -f /ql/data/repo/KD-happy_KDCheckin/*.py /ql/data/scripts/KD-happy_KDCheckin/KDsrc
 ```
 
